@@ -102,3 +102,13 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# API json file
+hackharvard2018-220000-bf0ac0c5c90a.json
+
+# Stupid Mac files
+.DS_Store
+
+# Other
+/test
+*.swp
