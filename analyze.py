@@ -6,6 +6,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
+
 def detect_faces(face_file):
     client = vision.ImageAnnotatorClient()
     content = face_file.read()
