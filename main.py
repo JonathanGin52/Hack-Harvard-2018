@@ -24,20 +24,20 @@ def main(input_folder):
     print("There is an average of {} faces in each photo.".format(total_faces / image_count))            
 
 if __name__ == '__main__':
-    #parser = argparse.ArgumentParser(
-    #    description='Detects faces in the given image.')
+    parser = argparse.ArgumentParser(description='Analyses an IG feed for signs and of depression')
     #parser.add_argument(
     #    'input_folder', help='the folder of images you\'d like to detect faces in.')
     #parser.add_argument(
     #    '--out', dest='output', default='out.jpg',
     #    help='the name of the output file.')
-    #args = parser.parse_args()
+    parser.add_argument('-d', '--debug', help="Flag to remove files upon completion.", action="store_true", default=False)
+    args = parser.parse_args()
 
     folder = 'temp/'
     username = input("Enter an Instagram username: ")
     scrape(username)
     main(folder)
     try:
-        rmtree(folder)
+        if not args.debug: rmtree(folder)
     except OSError as e:
         print ("Error: %s - %s." % (e.filename, e.strerror))
