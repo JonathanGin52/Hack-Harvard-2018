@@ -45,6 +45,6 @@ def get_average_hsv(input_file):
     avg_val = np.mean(flat_val)
 
     # display_info(hsv_image, flat_hue, flat_sat, flat_val)
-    
-    print("Average hue: {}\nAverage saturation: {}\nAverage value: {}".format(avg_hue, avg_sat, avg_val))
+
+    return avg_hue, avg_sat, avg_val
 
