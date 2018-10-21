@@ -38,7 +38,7 @@ def main(input_folder, args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Analyses an IG feed for signs and of depression')
-    parser.add_argument('-d', '--debug', help="Flag to remove files upon completion.", action="store_true", default=False)
+    parser.add_argument('-d', '--debug', help="Flag to keep temp files upon completion.", action="store_true", default=False)
     parser.add_argument('-v', '--verbose', help="Enable verbose output.", action="store_true", default=False)
     args = parser.parse_args()
 
