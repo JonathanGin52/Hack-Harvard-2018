@@ -77,7 +77,6 @@ def main(input_folder, args, username):
             # Reset the file pointer, so we can read the file again
             image.seek(0)
 
-    if args.verbose: print("\nThere is an average of {} faces in each photo.".format(total_faces / image_count))            
     results(image_count, face_array, total_h, total_s, total_v, username)
 
 if __name__ == '__main__':
